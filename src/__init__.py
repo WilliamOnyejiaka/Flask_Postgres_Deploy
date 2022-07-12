@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from .api.crud import crud
 from .config import HOST,PASSWORD,DBNAME,PORT,USER
 
@@ -16,5 +16,5 @@ def create_app():
 
     @app.get('/config')
     def con():
-        return [HOST,PASSWORD,DBNAME,PORT,USER]
+        return jsonify({'data': [HOST, PASSWORD, DBNAME, PORT, USER]})
     return app
