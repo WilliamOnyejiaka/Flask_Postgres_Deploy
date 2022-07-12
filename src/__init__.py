@@ -9,4 +9,8 @@ def create_app():
 
     app.register_blueprint(crud)
 
+    @app.get('/')
+    def index():
+        return '<h1 style="color=red;">Postgres App</h1>'
+
     return app
