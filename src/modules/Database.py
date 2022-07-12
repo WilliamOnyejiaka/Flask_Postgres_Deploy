@@ -16,7 +16,7 @@ class Database:
         self.dbname = DBNAME
         self.user = USER
         self.password = PASSWORD
-        self.port = int(PORT)
+        self.port = 5432
         self.conn = None
         self.cur = None
         self.error = None
