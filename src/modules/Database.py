@@ -1,13 +1,13 @@
 import psycopg2
 import psycopg2.extras
-# from .config import HOST,DBNAME,USER,PASSWORD,PORT
+from .config import HOST,DBNAME,USER,PASSWORD,PORT
 
 
-HOST = "ec2-3-223-169-166.compute-1.amazonaws.com"
-DBNAME = "dfl9vjpp5o9m6l"
-USER = "tmelhbtldopzsl"
-PASSWORD = "276fdeb85b68733838900aee7a3826044be5d440d90158e0f87e0d694b94c0af"
-PORT = 5432
+# HOST = "ec2-3-223-169-166.compute-1.amazonaws.com"
+# DBNAME = "dfl9vjpp5o9m6l"
+# USER = "tmelhbtldopzsl"
+# PASSWORD = "276fdeb85b68733838900aee7a3826044be5d440d90158e0f87e0d694b94c0af"
+# PORT = 5432
 
 class Database:
 
@@ -16,7 +16,7 @@ class Database:
         self.dbname = DBNAME
         self.user = USER
         self.password = PASSWORD
-        self.port = PORT
+        self.port = int(PORT)
         self.conn = None
         self.cur = None
         self.error = None
